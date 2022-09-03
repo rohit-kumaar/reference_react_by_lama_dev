@@ -1,4 +1,5 @@
 import "./App.css";
+import { ApiRequests } from "./components/useEffect/ApiRequests";
 import { UnderstandingUseEffect } from "./components/useEffect/UnderstandingUseEffect";
 import { UseEffectCleanUpFunction } from "./components/useEffect/UseEffectCleanUpFunction";
 import { UseEffectDependency } from "./components/useEffect/UseEffectDependency";
@@ -7,6 +8,7 @@ import ChangeAllInputsWithASingleOnChange from "./components/useState/ChangeAllI
 import DerivedStates from "./components/useState/DerivedStates";
 import UpdateSpecificObject from "./components/useState/UpdateSpecificObject";
 import UpdateState from "./components/useState/UpdateState";
+import { BrowserRouter as Router } from "react-router-dom";
 
 function App() {
   return (
@@ -17,8 +19,11 @@ function App() {
       {/* <DerivedStates /> */}
       {/* <UnderstandingUseEffect /> */}
       {/* <UseEffectDependency /> */}
-      <UseEffectUpdateState />
+      {/* <UseEffectUpdateState /> */}
       {/* <UseEffectCleanUpFunction /> */}
+      <Router>
+        <ApiRequests />
+      </Router>
     </div>
   );
 }
