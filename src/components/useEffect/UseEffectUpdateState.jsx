@@ -4,10 +4,15 @@ export const UseEffectUpdateState = () => {
   const [number, setNumber] = useState(0);
 
   useEffect(() => {
-    // comment strict mode then its update by one!
-    setInterval(() => {
+    console.log("effect runs!");
+
+    const interval = setInterval(() => {
       setNumber((prev) => prev + 1);
     }, 1000);
+
+    return () => {
+      clearInterval(interval);
+    };
   }, []);
 
   return <div>{number}</div>;
