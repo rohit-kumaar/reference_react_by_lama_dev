@@ -1,5 +1,6 @@
 import "./App.css";
 import { UnderstandingUseEffect } from "./components/useEffect/UnderstandingUseEffect";
+import { UseEffectDependency } from "./components/useEffect/UseEffectDependency";
 import ChangeAllInputsWithASingleOnChange from "./components/useState/ChangeAllInputsWithASingleOnChange";
 import DerivedStates from "./components/useState/DerivedStates";
 import UpdateSpecificObject from "./components/useState/UpdateSpecificObject";
@@ -12,7 +13,8 @@ function App() {
       {/* <UpdateSpecificObject /> */}
       {/* <ChangeAllInputsWithASingleOnChange /> */}
       {/* <DerivedStates /> */}
-      <UnderstandingUseEffect />
+      {/* <UnderstandingUseEffect /> */}
+      <UseEffectDependency />
     </div>
   );
 }
