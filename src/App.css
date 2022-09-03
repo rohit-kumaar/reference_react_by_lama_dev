@@ -28,3 +28,7 @@ button,
 input {
   padding: 5px 15px;
 }
+
+button {
+  cursor: pointer;
+}
