@@ -10,6 +10,7 @@ import UpdateSpecificObject from "./components/useState/UpdateSpecificObject";
 import UpdateState from "./components/useState/UpdateState";
 import { BrowserRouter as Router } from "react-router-dom";
 import { Post } from "./components/useReducer/01/Post";
+import { Form } from "./components/useReducer/02/Form";
 
 function App() {
   return (
@@ -25,7 +26,8 @@ function App() {
       {/* <Router>
         <ApiRequests />
       </Router> */}
-      <Post />
+      {/* <Post /> */}
+      <Form />
     </div>
   );
 }
