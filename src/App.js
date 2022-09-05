@@ -9,6 +9,7 @@ import DerivedStates from "./components/useState/DerivedStates";
 import UpdateSpecificObject from "./components/useState/UpdateSpecificObject";
 import UpdateState from "./components/useState/UpdateState";
 import { BrowserRouter as Router } from "react-router-dom";
+import { Post } from "./components/useReducer/01/Post";
 
 function App() {
   return (
@@ -21,9 +22,10 @@ function App() {
       {/* <UseEffectDependency /> */}
       {/* <UseEffectUpdateState /> */}
       {/* <UseEffectCleanUpFunction /> */}
-      <Router>
+      {/* <Router>
         <ApiRequests />
-      </Router>
+      </Router> */}
+      <Post />
     </div>
   );
 }
