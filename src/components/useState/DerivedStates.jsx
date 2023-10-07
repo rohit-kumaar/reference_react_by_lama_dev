@@ -15,7 +15,9 @@ const DerivedStates = () => {
       return prev.map((product) => {
         if (product.id === id) {
           return { ...product, quantity: product.quantity + 1 };
-        } else return product;
+        } else {
+          return product;
+        }
       });
     });
   };

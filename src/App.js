@@ -6,19 +6,17 @@ import { UseEffectDependency } from "./components/useEffect/UseEffectDependency"
 import { UseEffectUpdateState } from "./components/useEffect/UseEffectUpdateState";
 import ChangeAllInputsWithASingleOnChange from "./components/useState/ChangeAllInputsWithASingleOnChange";
 import DerivedStates from "./components/useState/DerivedStates";
-import UpdateSpecificObject from "./components/useState/UpdateSpecificObject";
-import UpdateState from "./components/useState/UpdateState";
 import { BrowserRouter as Router } from "react-router-dom";
 import { Post } from "./components/useReducer/01/Post";
 import { Form } from "./components/useReducer/02/Form";
+import FunctionalUpdateApproach from "./components/useState/FunctionalUpdateApproach";
 
 function App() {
   return (
     <div className="App">
-      {/* <UpdateState /> */}
-      {/* <UpdateSpecificObject /> */}
+      {/* <FunctionalUpdateApproach /> */}
       {/* <ChangeAllInputsWithASingleOnChange /> */}
-      {/* <DerivedStates /> */}
+      <DerivedStates />
       {/* <UnderstandingUseEffect /> */}
       {/* <UseEffectDependency /> */}
       {/* <UseEffectUpdateState /> */}
@@ -27,7 +25,7 @@ function App() {
         <ApiRequests />
       </Router> */}
       {/* <Post /> */}
-      <Form />
+      {/* <Form /> */}
     </div>
   );
 }
