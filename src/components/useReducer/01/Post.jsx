@@ -6,19 +6,18 @@ export const Post = () => {
   const [state, dispatch] = useReducer(postReducer, INITIAL_STATE);
   const URL = "https://jsonplaceholder.typicode.com/posts/1";
 
-  const handleFetch = () => {
-    dispatch({ type: ACTION_TYPES.FETCH_START });
-    fetch(URL)
-      .then((res) => {
-        return res.json();
-      })
-      .then((data) => {
-        dispatch({ type: ACTION_TYPES.FETCH_SUCCESS, payload: data });
-      })
-      .catch((error) => {
-        dispatch({ type: ACTION_TYPES.FETCH_ERROR });
-      });
-  };
+  async function handleFetch() {
+    dispatch({ type: ACTION_TYPE.FETCH_START });
+
+    try {
+      const res = await fetch(API);
+      if (!res.ok) throw new Error("User not fetch");
+      const data = await res.json();
+      dispatch({ type: ACTION_TYPE.FETCH_SUCCESS, payload: data });
+    } catch (error) {
+      dispatch({ type: ACTION_TYPE.FETCH_ERROR });
+    }
+  }
 
   return (
     <div>
